@@ -1,0 +1,351 @@
+:root {
+    --bg: #f6f8fb;
+    --card: #fff;
+    --text: #0f1724;
+    --muted: #5b6470;
+    --accent: #2563eb;
+    --accent-600: #1e40af;
+    --radius: 12px;
+    --container: 1100px;
+    --gap: 1.25rem;
+    --glass: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #f6f8fb, #eef2ff);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
+
+
+section {
+    scroll-margin-top: 80px;
+    width: 100%;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--accent-600);
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.12)
+}
+
+/* header */
+header {
+    background: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(6px);
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.logo {
+    width: 100%;
+    max-width: var(--container);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo-text span {
+    color: var(--accent);
+}
+
+/* Nav */
+.links {
+    display: flex;
+    gap: 14px;
+}
+
+.site-nav {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.site-nav .nav-link {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 240ms ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+    color: var(--accent-600);
+    background: rgba(37, 99, 235, 0.06);
+    outline: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span {
+    width: 30px;
+    display: block;
+    height: 3px;
+    background-color: var(--text);
+    margin: 5px 0;
+    transition: transform 180ms cubic-bezier(.2, .9, .3, 1)
+}
+
+/* Main Body */
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    /* height: 500px; */
+    /* background-color: red; */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hero h4 {
+    color: var(--muted);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 0.03em;
+    margin-inline: auto;
+}
+
+.hero-title {
+    margin: 0 auto 0.86rem auto;
+    font-size: 48px;
+    text-transform: capitalize;
+    line-height: 1.18;
+    width: 100%;
+    max-width: 800px
+}
+
+.hero-title span {
+    color: var(--accent);
+}
+
+.hero-sub {
+    color: var(--muted);
+    margin: 10px 0 20px;
+    max-width: 500px;
+    font-size: 20px;
+    margin-inline: auto;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.cp-svg {
+    margin: -5.5rem 0 -8rem 0;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--accent-600);
+    box-shadow: none;
+    border: 1px solid rgba(30, 64, 175, 0.5)
+}
+
+/* About */
+#about {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    margin: 40px 0;
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.about-image {
+    width: 800px;
+    margin-bottom: -30px;
+}
+
+.about-image img {
+    width: 100%;
+    margin-bottom: -30px;
+}
+
+.about-text {
+    padding: 0 30px;
+    display: block;
+    z-index: 2;
+}
+
+.about-text .section-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 18px;
+    padding-top: 18px;
+
+}
+
+.side-blur {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: block;
+    background: linear-gradient(to left, var(--accent), white 80%);
+    top: 0;
+    right: -60px;
+    border-radius: 500px;
+    filter: blur(132px);
+    opacity: 0.5;
+}
+
+.about-ctas {
+    padding-top: 12px;
+}
+
+.about-ctas .btn {
+    padding: 11px 32px;
+}
+
+@media only screen and (max-width: 880px) {
+    .cp-svg {
+        margin-top: -3rem;
+    }
+
+    .about-card{
+        flex-direction: column-reverse;
+    }
+
+    .about-image{
+        width: 100%;
+        padding-top: 24px;
+        display: flex ;
+        justify-content: center;
+    }
+
+    .about-image img{
+        width: 250px;
+    }
+}
+
+/* Small Screen */
+@media only screen and (max-width: 650px) {
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        transform: translatex(28px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 1.5rem;
+    }
+
+    .cp-svg {
+        margin-top: -0rem;
+    }
+
+    .hero h4 {
+        font-size: 18px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+    }
+
+    /* About */
+    #about{
+        margin-top: 80px;
+    }
+
+    .about-card{
+        padding: 26px 0;
+    }
+
+    .about-text .section-title{
+        font-size: 26px;
+    }
+
+    .about-text p{
+        font-size: 16px;
+    }
+}
